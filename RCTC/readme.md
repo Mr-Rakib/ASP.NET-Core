@@ -1,0 +1,10 @@
+SCREEEN CAST OF LMS
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Admission.PNG)
