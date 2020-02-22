@@ -6,7 +6,4 @@ SCREEEN CAST OF RCTC
 ![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Paid.PNG)
 ![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Unpaid.PNG)
 ![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Profile.PNG)
-
-![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Mobile/Dashboard.PNG)
-![Alt Text](https://github.com/Mr-Rakib/ASP.NET-Core/blob/master/RCTC/Images/Mobile/Admission.PNG)
-![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Mobile/Profile.PNG)
+![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Mobile/Dashboard.PNG)![Alt Text](https://github.com/Mr-Rakib/ASP.NET-Core/blob/master/RCTC/Images/Mobile/Admission.PNG)![Alt Text](https://raw.githubusercontent.com/Mr-Rakib/ASP.NET-Core/master/RCTC/Images/Mobile/Profile.PNG)
