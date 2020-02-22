@@ -1,0 +1,103 @@
+﻿@model RCTC.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+    int remain = Model.Cost-Model.Paid;
+}
+
+<h1 class="content-header pb-3">Profile</h1>
+
+
+<div class="container-fluid pt-2">
+
+    <div class="form-row">
+        <div class="col-md-4 pt-3">
+            <div class="form-group ">
+                <img src=~/images/@Model.Image id="profile-image" />
+            </div>
+            <div class="form-group">
+                <h2 class="profile-header">
+                    @Html.DisplayFor(model => model.FullName)
+                </h2>
+                <div >
+                    <p>@Html.DisplayFor(model => model.Program) <br />
+                       @Html.DisplayFor(model => model.Contact) <br /> <br /></p>
+                    @{
+                    if(remain<=0){
+                        <p class="text-success font-weight-bold">Paid </p>
+                    }
+                    else {
+                        <p class="text-danger font-weight-bold">Unpaid</p>
+                    }
+
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+
+
+
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label>Father's Name</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.FathersName)</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Mother's Name</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.MothersName)</label>
+                </div>
+            </div>
+
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label>Profession</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.Profession)</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Gender</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.Gender)</label>
+                </div>
+            </div>
+
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label>Date of Birth</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.DateofBirth)</label>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Contact</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.Contact)</label>
+                </div>
+            </div>
+
+            <div class="form-row ">
+                <div class="form-group col-md-4">
+                    <label>Cost</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.Cost)</label>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Paid</label>
+                    <label class="form-control"> @Html.DisplayFor(model => model.Paid)</label>
+                </div>
+                <div class="form-group col-md-4">
+                    <label>Remain</label>
+                    <label class="form-control">@remain</label>
+                </div>
+            </div>
+
+            <div class="form-group ">
+                <label>Address</label>
+                <textarea class="form-control" readonly rows="2" style="background-color:#fff">@Html.DisplayFor(model => model.Address)</textarea>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.UserID}) |
+    <a asp-action="Index">Back to List</a>
+</div>

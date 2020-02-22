@@ -1,0 +1,43 @@
+﻿@model RCTC.Models.Programs
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 class="content-header pb-3">Program's Details</h1>
+<hr />
+
+<div class="container-fluid">
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <label>Program Name</label>
+            <label class="form-control"> @Html.DisplayFor(model => model.PName)</label>
+        </div>
+
+    </div>
+
+    <div class="form-row ">
+        <div class="form-group col-md-6">
+            <label>Total Cost</label>
+            <label class="form-control"> @Html.DisplayFor(model => model.Cost)</label>
+        </div>
+        <div class="form-group col-md-6">
+            <label>Program Duration</label>
+            <label class="form-control"> @Html.DisplayFor(model => model.Period)</label>
+        </div>
+    </div>
+
+    <div class="form-row ">
+        <div class="form-group col-md-12">
+            <label>Program Descriptions</label>
+            <textarea class="form-control" readonly rows="4" id="text-area" style="background-color:#fff">@Html.DisplayFor(model => model.PDescriptions)</textarea>
+        </div>
+    </div>
+</div>
+
+
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PID }) |
+    <a asp-action="Index">Back to List</a>
+</div>

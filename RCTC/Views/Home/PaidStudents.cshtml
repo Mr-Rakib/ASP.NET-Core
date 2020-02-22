@@ -1,0 +1,107 @@
+﻿@model IEnumerable<RCTC.Models.Student>
+
+@{
+    ViewData["Title"] = "PaidStudents";
+}
+
+<h1 class="content-header pb-3">Paid Students</h1>
+<div class=" pb-4">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" asp-action="AllStudents">Students</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" asp-action="UnpaidStudents">Unpaid Students</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" asp-action="PaidStudents">Paid Students</a>
+        </li>
+    </ul>
+</div>
+
+
+<form asp-action="PaidStudents" method="get">
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <input name="search" class="form-control" type="text" placeholder="Search by anything" />
+        </div>
+        <div class="form-group col-md-2">
+
+            <input class="form-control btn btn-success" type="submit" value="Search" />
+        </div>
+
+        <div class="form-group col-md-2 text-right">
+            <a asp-action="StudentAdmission">
+                <button type="button" class="btn btn-outline-success">+ Add Student</button>
+            </a>
+        </div>
+
+    </div>
+</form>
+
+
+<table class="table table-responsive-md">
+    <thead class="table-success ">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FathersName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Program)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Contact)
+            </th>
+
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FathersName)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Program)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contact)
+                </td>
+
+                <td class="text-center">
+                    @Html.ActionLink("", "Edit", new { id = item.UserID }, new { @class = "far fa-edit text-primary" }) &nbsp;
+                    @Html.ActionLink("", "Details", new { id = item.UserID }, new { @class = "far fa-eye text-success" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

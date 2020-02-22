@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RCTC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+    <link href="~/css/CustomCSS.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <div>
+
+        <div id="mainContent">
+            <div id="sidebar">
+                <div class="toggle-bar" onClick="OpenSidebar()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="pt-5">
+
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index"><i class="fas fa-home p-1 "></i> Home</a></li>
+                        <li><a asp-controller="Program" asp-action="Index"><i class="fas fa-tasks p-1"></i> Programs</a></li>
+                        <li><a asp-controller="Home" asp-action="StudentAdmission"> <i class="fas fa-user-plus p-1"></i> Student Admission</a></li>
+                        <li><a asp-controller="Home" asp-action="AllStudents"><i class="fas fa-users p-1"></i> Students</a></li>
+                        <li><a asp-controller="Home" asp-action="PaidStudents"><i class="fas fa-money-check-alt p-1"></i> Paid Students</a></li>
+                        <li><a asp-controller="Home" asp-action="UnpaidStudents"><i class="far fa-calendar-times p-1"></i> Unpaid Students</a></li>
+                        <li><a asp-controller="Home" asp-action="About"><i class="far fa-address-card p-1"></i> About</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact"><i class="fas fa-phone-alt p-1 "></i> Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="content">
+                @RenderBody()
+            </div>
+
+        </div>
+        <footer class="fixed-bottom text-right" id="footer">
+            &copy; 2020 - Developed By - <a href="https://www.facebook.com/prince.hridoy.1213">Md Rakibul Hasan</a>
+        </footer>
+    </div>
+    
+
+
+    <script src="~/js/CustomJS.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

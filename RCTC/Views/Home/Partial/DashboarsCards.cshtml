@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewData["Title"] = "DashboarsCards";
+}
+    <div class="row">
+            <div class="col-md-3 mb-5">
+                <a asp-action="AllStudents">
+                    <div class="card text-white bg-info" style="background: #060151!important">
+                        <div class="card-header">TOTAL STUDNETS</div>
+                        <div class="card-body" id="iconBar">
+                            <i class="fas fa-users"></i>
+                            <div style="float: right; padding-left: 30px;">
+                                10
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+       
+
+            <div class="col-md-3 mb-5">
+                <a asp-action="Index" asp-controller="Program">
+                    <div class="card text-white bg-info" style="background:#b817179e!important">
+                        <div class="card-header">PROGRAMS</div>
+                        <div class="card-body" id="iconBar">
+                            <i class="fas fa-tasks"></i>
+                            <div style="float:right;padding-left:30px;">
+                                10
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-3 mb-5">
+                <a asp-action="PaidStudents">
+                    <div class="card text-white bg-info" style="background:#0e4952!important">
+                        <div class="card-header">PAID STUDENTS</div>
+                        <div class="card-body" id="iconBar">
+                            <i class="fas fa-money-check-alt"></i>
+                            <div style="float:right;padding-left:30px;">
+                                10
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-md-3 mb-5">
+                <a asp-action="UnpaidStudents">
+                    <div class="card text-white bg-info" style="background:#b8174b!important">
+                        <div class="card-header">UNPAID STUDENTS</div>
+                        <div class="card-body" id="iconBar">
+                            <i class="fas fa-strikethrough"></i>
+                            <div style="float:right;padding-left:30px;">
+                                10
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    </div>
+
+

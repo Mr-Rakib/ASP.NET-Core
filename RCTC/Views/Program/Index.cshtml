@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RCTC.Models.Programs>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="content-header pb-3">Programs</h1>
+
+
+<form asp-action="Index" asp-controller="Program" method="get">
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <input name="search" class="form-control" type="text" placeholder="Search by anything" />
+        </div>
+        <div class="form-group col-md-2">
+            <input class="form-control btn btn-info" type="submit" value="Search" />
+        </div>
+
+        <div class="form-group col-md-2 text-right">
+            <a asp-action="Create">
+                <button type="button" class="btn btn-outline-info">+ Add Program</button>
+            </a>
+        </div>
+
+    </div>
+</form>
+
+
+<table class="table table-responsive-md">
+    <thead class="table-info container-fluid">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PName)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Cost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Period)
+            </th>
+            <th > </th>
+        </tr>
+    </thead>
+    <tbody c>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PName)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Period)
+                </td>
+                <td >
+                    @Html.ActionLink("", "Edit", new { id = item.PID }, new { @class = "far fa-edit text-primary" }) &nbsp;
+                    @Html.ActionLink("", "Details", new { id = item.PID }, new { @class = "far fa-eye text-success" })  &nbsp;
+                    @Html.ActionLink("", "Delete", new { id = item.PID }, new { onClick = "return confirm('Are you sure to delete ?')", @class = "fas fa-trash-alt text-danger" })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
